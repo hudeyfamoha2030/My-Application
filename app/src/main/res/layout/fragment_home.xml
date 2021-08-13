@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeFragment">
+
+
+        <LinearLayout
+            android:id="@+id/LLheader"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/background_header_with_sparkle"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:letterSpacing="0.25"
+                android:text="TENDO"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_heart_white" />
+
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/notifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_notification_white" />
+
+                    <TextView
+                        android:id="@+id/tvNotificationCount"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/circle_bg"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:maxLength="4"
+                        android:text="5"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_shopping_cart" />
+
+                    <TextView
+                        android:id="@+id/tvShoppingCartCount"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/circle_bg"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:maxLength="4"
+                        android:text="8"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search.."
+                android:background="@drawable/searchview_custom_shape" />
+
+
+        </LinearLayout>
+
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LLheader" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
