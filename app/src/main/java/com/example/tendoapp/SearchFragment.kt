@@ -34,7 +34,7 @@ class SearchFragment : Fragment() {
         binding.searchView.setOnQueryTextListener( object : SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Toast.makeText(requireContext(),"Submitted", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),"Submitted",Toast.LENGTH_SHORT).show()
                 return true
             }
 
@@ -55,5 +55,6 @@ class SearchFragment : Fragment() {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(windowToken, 0)
     }
+
 
 }
