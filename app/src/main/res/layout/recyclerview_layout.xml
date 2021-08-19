@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/tisho"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="White Cotton Shirt"
+                    android:layout_toLeftOf="@id/cart"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="25dp"/>
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="₵67.90"
+                    android:layout_toLeftOf="@id/cart"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:id="@+id/cart"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_cart"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

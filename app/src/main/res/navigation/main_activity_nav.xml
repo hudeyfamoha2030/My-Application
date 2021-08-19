@@ -8,7 +8,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.tendoapp.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_homeFragment_to_searchFragment"
+        app:destination="@id/searchFragment" />
     <fragment
         android:id="@+id/sharesFragment"
         android:name="com.example.tendoapp.SharesFragment"
@@ -29,4 +36,8 @@
         android:name="com.example.tendoapp.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.tendoapp.SearchFragment"
+        android:label="SearchFragment" />
 </navigation>
