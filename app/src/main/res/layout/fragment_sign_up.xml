@@ -31,16 +31,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
                         android:layout_margin="20dp"
-                        android:fontFamily="@font/nunito_sans_extra_bold"
-                        android:letterSpacing="0.25"
-                        android:text="TENDO"
-                        android:textColor="@color/white"
-                        android:textSize="32sp"
-                        android:textStyle="bold" />
+                        android:contentDescription="logo"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/tendo" />
 
                     <TextView
                         android:layout_width="wrap_content"

@@ -9,21 +9,20 @@
         tools:context=".onboarding.screens.FirstScreenFragment"
         android:background="@color/deep_blue">
 
-        <TextView
+        <ImageView
             android:id="@+id/tvTendo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/nunito_sans_extra_bold"
-            android:letterSpacing="0.25"
-            android:text="TENDO"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/logo"
+            android:scaleType="fitEnd"
+            android:src="@drawable/tendo"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+
 
         <TextView
             android:id="@+id/textView2"

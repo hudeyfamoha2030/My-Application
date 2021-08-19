@@ -15,20 +15,13 @@
             android:src="@drawable/ic_sparkles"
             android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/tvTendo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/nunito_sans_extra_bold"
-            android:gravity="center"
-            android:layout_gravity="center|center_vertical"
-            android:layout_marginBottom="20dp"
-            android:letterSpacing="0.25"
-            android:text="TENDO"
-            android:textColor="@color/white"
-            android:textSize="44sp"
-            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="300dp"
+            android:src="@drawable/tendo"
+            android:layout_gravity="center"/>
+
 
     </FrameLayout>
 </layout>
