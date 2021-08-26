@@ -1,4 +1,4 @@
-package com.example.tendoapp
+package com.example.tendoapp.ui.main.view.fragments
 
 import android.os.Bundle
 import android.text.SpannableString
@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentSignUpBinding
 
 class SignUpFragment : Fragment() {
@@ -24,7 +25,7 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding= DataBindingUtil.inflate(inflater,R.layout.fragment_sign_up,container,false)
+        binding= DataBindingUtil.inflate(inflater, R.layout.fragment_sign_up,container,false)
         setSpannableString()
         return binding.root
     }

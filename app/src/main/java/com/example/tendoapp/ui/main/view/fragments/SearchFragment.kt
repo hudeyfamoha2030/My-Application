@@ -1,4 +1,4 @@
-package com.example.tendoapp
+package com.example.tendoapp.ui.main.view.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -19,7 +20,7 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= DataBindingUtil.inflate(inflater,R.layout.fragment_search, container, false)
+        binding= DataBindingUtil.inflate(inflater, R.layout.fragment_search, container, false)
         return binding.root
     }
 

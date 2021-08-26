@@ -1,4 +1,4 @@
-package com.example.tendoapp
+package com.example.tendoapp.ui.main.view.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentSplashScreenBinding
 
 class SplashScreenFragment : Fragment() {
@@ -31,7 +32,7 @@ class SplashScreenFragment : Fragment() {
             1500
         )
 
-        binding= DataBindingUtil.inflate(inflater,R.layout.fragment_splash_screen, container, false)
+        binding= DataBindingUtil.inflate(inflater, R.layout.fragment_splash_screen, container, false)
 
         return binding.root
     }

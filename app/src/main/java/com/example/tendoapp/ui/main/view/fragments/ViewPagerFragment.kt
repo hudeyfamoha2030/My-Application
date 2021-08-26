@@ -1,4 +1,4 @@
-package com.example.tendoapp.onboarding
+package com.example.tendoapp.ui.main.view.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -15,9 +15,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentViewPagerBinding
-import com.example.tendoapp.onboarding.screens.FirstScreenFragment
-import com.example.tendoapp.onboarding.screens.SecondScreenFragment
-import com.example.tendoapp.onboarding.screens.ThirdScreenFragment
+import com.example.tendoapp.ui.main.adapter.ViewPagerAdapter
+import com.example.tendoapp.ui.main.view.fragments.screens.FirstScreenFragment
+import com.example.tendoapp.ui.main.view.fragments.screens.SecondScreenFragment
+import com.example.tendoapp.ui.main.view.fragments.screens.ThirdScreenFragment
 
 class ViewPagerFragment : Fragment() {
 

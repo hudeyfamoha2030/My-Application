@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Tendo</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Already_have_account">Already have an account? Sign In</string>
-    <string name="search">search</string>
+    <string name="view_more">View more</string>
+    <string name="delivery">DELIVERY &amp; RETURN DETAILS</string>
+    <string name="details">"Delivery: Within 8-12 business days <br></br> Return: Within 7 days of delivery. Free reverse <br></br> pick up, full funded"</string>
+    <string name="description_string">Straight cut shirt jacket in sturdy, washed <br></br> denim. Features a pointed collar and buttons <br></br> down the front. Dropped shoulders and long <br></br> sleeves with button cuffs. Detachable tie belt <br></br> at the waist and a rounded hem.</string>
 </resources>

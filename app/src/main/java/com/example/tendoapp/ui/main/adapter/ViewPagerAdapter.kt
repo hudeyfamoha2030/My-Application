@@ -1,4 +1,4 @@
-package com.example.tendoapp.onboarding
+package com.example.tendoapp.ui.main.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

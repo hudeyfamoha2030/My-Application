@@ -1,4 +1,4 @@
-package com.example.tendoapp
+package com.example.tendoapp.ui.main.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentAccountActivationBinding
 
 class AccountActivationFragment : Fragment() {
@@ -18,7 +19,7 @@ class AccountActivationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=
-            DataBindingUtil.inflate(inflater,R.layout.fragment_account_activation, container, false)
+            DataBindingUtil.inflate(inflater, R.layout.fragment_account_activation, container, false)
         return binding.root
     }
 
