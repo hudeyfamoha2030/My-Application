@@ -22,11 +22,11 @@ class SplashScreenFragment : Fragment() {
     ): View? {
         Handler(Looper.getMainLooper()).postDelayed(
             {
-                if (onBoardingFinished()){
-                    findNavController().navigate(R.id.action_splashScreenFragment_to_signUpFragment)
-                }else{
+//                if (onBoardingFinished()){
+//                    findNavController().navigate(R.id.action_splashScreenFragment_to_signUpFragment)
+//                }else{
                     findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
-                }
+//                }
             },
             1500
         )

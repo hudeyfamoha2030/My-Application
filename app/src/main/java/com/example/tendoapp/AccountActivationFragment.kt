@@ -19,6 +19,7 @@ class AccountActivationFragment : Fragment() {
     ): View? {
         binding=
             DataBindingUtil.inflate(inflater,R.layout.fragment_account_activation, container, false)
+
         return binding.root
     }
 
