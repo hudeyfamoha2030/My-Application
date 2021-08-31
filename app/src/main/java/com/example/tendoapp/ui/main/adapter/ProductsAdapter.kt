@@ -51,8 +51,8 @@ class ProductsAdapter(var context: Context) : RecyclerView.Adapter<ProductsAdapt
         holder.image.setImageResource(data.image)
 
         holder.itemView.setOnClickListener {
-//            val i = Intent(context, ProductActivity::class.java)
-//            context.startActivity(i)
+            val i = Intent(context, ProductActivity::class.java)
+            context.startActivity(i)
         }
 
     }

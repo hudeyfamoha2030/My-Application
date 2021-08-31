@@ -21,5 +21,6 @@
     <color name="background">#FFFFFF</color>
 
     <color name="color_icons">#9098B1</color>
+    <color name="ic_launcher_background">#004B87</color>
 
 </resources>
