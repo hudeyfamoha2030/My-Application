@@ -5,8 +5,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:paddingBottom="24dp"
         android:layout_height="match_parent"
-        tools:context=".onboarding.ViewPagerFragment"
+        tools:context=".ui.main.view.fragments.ViewPagerFragment"
         android:background="@color/deep_blue">
 
         <Button
@@ -15,7 +16,6 @@
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
             android:text="Skip"
-            app:layout_constraintBottom_toTopOf="@+id/viewPager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
             android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.75"
+            android:layout_marginBottom="40dp"
             app:layout_constraintVertical_bias="0.3"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,11 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintVertical_bias="0.15"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/viewPager"
-            app:layout_constraintStart_toStartOf="@+id/viewPager"
+            android:layout_marginStart="36dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -52,7 +50,7 @@
             android:background="@drawable/button_background_shape"
             android:text="Get Started"
             android:gravity="center|center_vertical|center_horizontal"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_bold"
             android:textSize="15sp"
@@ -68,6 +66,7 @@
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
             android:text="Next"
+            android:visibility="invisible"
             android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintHorizontal_bias="1"

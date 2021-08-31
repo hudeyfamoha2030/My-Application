@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".onboarding.screens.FirstScreenFragment"
+        tools:context=".ui.main.view.fragments.screens.FirstScreenFragment"
         android:background="@color/deep_blue">
 
 
@@ -20,7 +20,6 @@
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             android:layout_margin="20dp"
-            android:contentDescription="logo"
             android:scaleType="fitEnd"
             android:src="@drawable/tendo" />
 

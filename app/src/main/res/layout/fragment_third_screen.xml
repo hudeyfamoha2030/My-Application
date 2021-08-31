@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".onboarding.screens.ThirdScreenFragment"
+        tools:context=".ui.main.view.fragments.screens.ThirdScreenFragment"
         android:background="@color/deep_blue">
 
         <TextView

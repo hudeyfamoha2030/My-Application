@@ -9,6 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:background="@color/background"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +25,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:context=".SignUpFragment">
+                tools:context=".ui.main.view.fragments.SignUpFragment">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -78,9 +79,10 @@
                 android:id="@+id/tvText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create a new account"
+                android:text="@string/create_a_new_account"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginTop="30dp"
+                android:textColor="@color/text_create_account"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@id/TILName"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -93,18 +95,34 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="20dp"
-                app:startIconDrawable="@drawable/ic_name_icon"
-                app:layout_constraintTop_toBottomOf="@id/tvText"
+                android:layout_marginEnd="30dp"
+                android:foregroundTint="@color/deep_blue"
+                android:hint="@string/full_name"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/text_create_account"
+                app:boxStrokeErrorColor="#FF0C0C"
+                app:counterTextColor="@color/text_create_account"
+                app:endIconTint="#CA0909"
+                app:helperTextTextColor="@color/text_create_account"
+                app:hintTextColor="@color/deep_blue"
+                app:layout_constraintEnd_toEndOf="@id/tvText"
                 app:layout_constraintStart_toStartOf="@id/tvText"
-                app:layout_constraintEnd_toEndOf="@id/tvText">
+                app:layout_constraintTop_toBottomOf="@id/tvText"
+                app:placeholderTextColor="@color/text_create_account"
+                app:prefixTextColor="@color/deep_blue"
+                app:startIconDrawable="@drawable/ic_name_icon"
+                app:startIconTint="@color/color_icons">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textColorHighlight="@color/primary"
+                    android:textColorHint="@color/primary"
+                    android:textColorLink="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -112,18 +130,23 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Your Email"
-                app:startIconDrawable="@drawable/ic_email_icon"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="15dp"
-                app:layout_constraintTop_toBottomOf="@id/TILName"
+                android:layout_marginEnd="30dp"
+                android:hint="Your Email"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/text_create_account"
+                app:layout_constraintEnd_toEndOf="@id/TILName"
                 app:layout_constraintStart_toStartOf="@id/TILName"
-                app:layout_constraintEnd_toEndOf="@id/TILName">
+                app:layout_constraintTop_toBottomOf="@id/TILName"
+                app:startIconDrawable="@drawable/ic_email_icon"
+                app:startIconTint="@color/color_icons">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -132,17 +155,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:layout_marginTop="15dp"
-                app:startIconDrawable="@drawable/ic_baseline_phone_iphone_24"
+                android:layout_marginEnd="30dp"
                 android:hint="Phone Number"
-                app:layout_constraintTop_toBottomOf="@id/TILEmail"
+                android:textColorHint="@color/primary"
+                app:boxStrokeColor="@color/text_create_account"
+                app:layout_constraintEnd_toEndOf="@id/TILEmail"
                 app:layout_constraintStart_toStartOf="@id/TILEmail"
-                app:layout_constraintEnd_toEndOf="@id/TILEmail">
+                app:layout_constraintTop_toBottomOf="@id/TILEmail"
+                app:startIconDrawable="@drawable/ic_baseline_phone_iphone_24"
+                app:startIconTint="@color/color_icons">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPhone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -154,6 +182,9 @@
                 android:layout_marginEnd="30dp"
                 android:layout_marginTop="15dp"
                 android:hint="Password"
+                app:startIconTint="@color/color_icons"
+                app:boxStrokeColor="@color/text_create_account"
+                android:textColorHint="@color/primary"
                 app:endIconMode="password_toggle"
                 app:startIconDrawable="@drawable/ic_lock_icon"
                 app:layout_constraintTop_toBottomOf="@id/TILPhoneNumber"
@@ -162,9 +193,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:inputType="textPassword"
+                    android:textColor="@color/primary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignUp"
@@ -185,6 +219,7 @@
                 android:id="@+id/tvAlreadyHaveAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/text_create_account"
                 android:text="Already have an account? "
                 android:fontFamily="@font/poppins_regular"
                 android:layout_marginTop="10dp"
