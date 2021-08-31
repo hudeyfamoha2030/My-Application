@@ -1,29 +1,48 @@
 package com.example.tendoapp.ui.main.view.fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
+import androidx.viewpager2.widget.ViewPager2
 import com.example.tendoapp.ui.main.adapter.ProductsAdapter
 import com.example.tendoapp.R
 import com.example.tendoapp.data.model.Category
 import com.example.tendoapp.data.model.Product
+import com.example.tendoapp.data.model.SliderItem
 import com.example.tendoapp.databinding.FragmentHomeBinding
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapter
+import com.example.tendoapp.ui.main.adapter.ImageSliderAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlin.math.abs
 
 class HomeFragment : Fragment() {
 
     private lateinit var productsAdapter: ProductsAdapter
+    lateinit var indicatorContainer: LinearLayout
     private lateinit var categoriesAdapter: CategoriesAdapter
     private var dataList = mutableListOf<Product>()
     private var dataListCategory = mutableListOf<Category>()
+    var str:String=""
+
+    lateinit var sliderItemList:ArrayList<SliderItem>
+    lateinit var sliderAdapter: ImageSliderAdapter
+    lateinit var sliderHandler: Handler
+    lateinit var sliderRunnable:Runnable
 
     lateinit var binding:FragmentHomeBinding
-
+    val TAG="HomeFragment"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,6 +50,10 @@ class HomeFragment : Fragment() {
 
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         searchViewListener()
+        setUpIndicators()
+        setCurrentIndicator(0)
+        sliderItems()
+        itemSliderView()
 
         return binding.root
 
@@ -43,7 +66,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun showTopCategories(){
-
 
         dataListCategory.add(Category("Technology", R.drawable.ic_tech))
         dataListCategory.add(Category("Pharmacy", R.drawable.ic_pharmacy))
@@ -79,40 +101,124 @@ class HomeFragment : Fragment() {
 
         }
     }
-    private fun flipperImages(image:Int){
-        val imageView= ImageView(requireContext())
-        imageView.setBackgroundResource(image)
 
-        binding.viewFlipper.addView(imageView)
-        binding.viewFlipper.flipInterval=4000  //4sec
-        binding.viewFlipper.isAutoStart=true
+    private fun itemSliderView() {
+        sliderItemList.add(SliderItem(R.drawable.ic_slideshow1))
+        sliderItemList.add(SliderItem(R.drawable.ic_slideshow2))
+        sliderItemList.add(SliderItem(R.drawable.ic_slideshow3))
+    }
 
-        //some animations
+    private fun sliderItems() {
+        sliderItemList= ArrayList()
+        sliderAdapter= ImageSliderAdapter(binding.viewpager22,sliderItemList)
+        binding.viewpager22.adapter=sliderAdapter
+        binding.viewpager22.clipToPadding=false
+        binding.viewpager22.clipChildren=false
+        binding.viewpager22.offscreenPageLimit=3
+        binding.viewpager22.getChildAt(0).overScrollMode= RecyclerView.OVER_SCROLL_NEVER
+        val compositePageTransformer= CompositePageTransformer()
+        compositePageTransformer.addTransformer(MarginPageTransformer(35))
+        compositePageTransformer.addTransformer { page, position ->
+            val r=1- abs(position)
+            page.scaleY=0.85f + r*0.15f
+        }
+        binding.viewpager22.setPageTransformer(compositePageTransformer)
+        sliderHandler= Handler(Looper.getMainLooper())
+        sliderRunnable= Runnable {
+            binding.viewpager22.currentItem=binding.viewpager22.currentItem + 1
+        }
+        str="First"
+        binding.viewpager22.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                Log.d(TAG,position.toString())
 
-        binding.viewFlipper.setInAnimation(requireContext(),android.R.anim.slide_in_left)
-        binding.viewFlipper.setOutAnimation(requireContext(),android.R.anim.slide_out_right)
+                if (position==0 || position%3==0)
+                {
+                    str="Second"
+                    setCurrentIndicator(0)
+                }
+                else{
+                    if(str == "Second"){
+                        str="Third"
+                        setCurrentIndicator(1)
+                    }
+                    else{
+                        setCurrentIndicator(2)
+                    }
 
+                }
 
+                sliderHandler.removeCallbacks(sliderRunnable)
+                sliderHandler.postDelayed(sliderRunnable,4000)
+            }
+        }
+        )
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sliderHandler.removeCallbacks(sliderRunnable)
     }
 
     override fun onResume() {
         super.onResume()
-        val imagesArray= arrayOf(
-            R.drawable.ic_slideshow1,
-            R.drawable.ic_slideshow2,
-            R.drawable.ic_slideshow3
-        )
-
-        for(image in imagesArray){    // we have put this in OnResume because it is also called during onCreate
-            flipperImages(image)
-        }
+        sliderHandler.postDelayed(sliderRunnable,4000)
     }
 
-    fun searchViewListener(){
+    private fun searchViewListener(){
         binding.LLSearchView.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
         }
     }
+
+    private fun setUpIndicators(){
+        indicatorContainer=binding.LLViewPagerIndicator
+        val indicators= arrayOfNulls<ImageView>(3)
+        val layoutParams: LinearLayout.LayoutParams = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        layoutParams.setMargins(8,0,8,0)
+
+        for(i in indicators.indices){
+            indicators[i]= ImageView(requireContext())
+            indicators[i]?.let {
+                it.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.indicator_inactive_blueoutline
+                    ))
+                it.layoutParams=layoutParams
+                indicatorContainer.addView(it)
+            }
+        }
+    }
+
+    private fun setCurrentIndicator(position:Int){
+        val childCount=indicatorContainer.childCount
+        for(i in 0 until childCount){
+            val imageView=indicatorContainer.getChildAt(i) as ImageView
+            if(i==position){
+                imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.indicator_active_blue
+                    )
+                )
+            }
+            else{
+                imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        requireContext(),
+                        R.drawable.indicator_inactive_blueoutline
+                    )
+                )
+            }
+        }
+    }
+
 
 
 }
