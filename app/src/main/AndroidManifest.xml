@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TendoApp">
-        <activity android:name=".ui.main.view.activities.ProductActivity"></activity>
-        <activity android:name=".SearchResultsActivity"></activity>
+        <activity android:name=".ui.main.view.activities.ProfileActivity"></activity>
+        <activity android:name=".ui.main.view.activities.ProductActivity" />
+        <activity android:name=".SearchResultsActivity" />
         <activity android:name=".ui.main.view.activities.MainActivity2" />
         <activity android:name=".ui.main.view.activities.MainActivity">
             <intent-filter>
