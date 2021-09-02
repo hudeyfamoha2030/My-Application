@@ -27,10 +27,7 @@ class SplashScreenFragment : Fragment() {
     ): View? {
 
 
-            activityScope.launch {
-                delay(2000)
-                findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
-            }
+
 
 
 
@@ -45,8 +42,25 @@ class SplashScreenFragment : Fragment() {
     }
 
     override fun onPause() {
-        activityScope.cancel()
         super.onPause()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        activityScope.launch {
+            delay(2000)
+            findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        activityScope.cancel()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
     }
 
 }

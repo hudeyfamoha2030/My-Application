@@ -1,5 +1,6 @@
 package com.example.tendoapp.ui.main.view.fragments
 
+import DepthPageTransformer
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -44,6 +45,8 @@ class ViewPagerFragment : Fragment() {
         )
 
         binding.viewPager.adapter=adapter
+        binding.viewPager.setPageTransformer(DepthPageTransformer())
+
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -96,11 +99,11 @@ class ViewPagerFragment : Fragment() {
         if(position==2){
             binding.btnGetStarted.visibility=View.VISIBLE
             binding.btnSkip.visibility=View.INVISIBLE
-            binding.btnNext.visibility=View.INVISIBLE
+//            binding.btnNext.visibility=View.INVISIBLE
             navigateToNextScreen()
         }
         else{
-            binding.btnNext.visibility=View.VISIBLE
+//            binding.btnNext.visibility=View.VISIBLE
             binding.btnSkip.visibility=View.VISIBLE
             binding.btnGetStarted.visibility=View.INVISIBLE
         }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_white_24dp"
+        android:title="@string/search"
+        android:contentDescription="@string/content_description_search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/baseline_favorite_border_white_24dp"
+        android:title="@string/favorite"
+        android:contentDescription="@string/content_description_favorite"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/baseline_notifications_none_white_24dp"
+        android:title="@string/favorite"
+        android:contentDescription="@string/content_description_favorite"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/cart"
+        android:contentDescription="@string/content_description_favorite"
+        app:showAsAction="always" />
+
+
+</menu>

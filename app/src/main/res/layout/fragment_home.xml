@@ -3,252 +3,226 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.main.view.fragments.HomeFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context=".ui.main.view.fragments.HomeFragment">
+            android:layout_height="@dimen/app_bar_height"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
 
-            <LinearLayout
-                android:id="@+id/LLheader"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/background_header_with_sparkle"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/nunito_sans_extra_bold"
-                    android:letterSpacing="0.25"
-                    android:text="TENDO"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-
-                <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:weightSum="3"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp">
-
-                    <FrameLayout
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_heart_white" />
-
-
-                    </FrameLayout>
-
-
-                    <FrameLayout
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/notifi"
-                            android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_notification_white" />
-
-                        <TextView
-                            android:id="@+id/tvNotificationCount"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:layout_marginEnd="6dp"
-                            android:background="@drawable/circle_bg"
-                            android:layout_gravity="end"
-                            android:gravity="center"
-                            android:maxLength="4"
-                            android:text="5"
-                            android:textColor="@color/white"
-                            android:textSize="10sp" />
-
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_shopping_cart" />
-
-                        <TextView
-                            android:id="@+id/tvShoppingCartCount"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:layout_marginEnd="2dp"
-                            android:background="@drawable/circle_bg"
-                            android:layout_gravity="end"
-                            android:gravity="center"
-                            android:maxLength="4"
-                            android:text="8"
-                            android:textColor="@color/white"
-                            android:textSize="10sp" />
-
-                    </FrameLayout>
-
-
-                </LinearLayout>
-
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="top"
+                android:layout_gravity="center"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:toolbarId="@+id/toolbar">
 
                 <LinearLayout
                     android:id="@+id/LLSearchView"
-                    android:layout_width="350dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="112dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/searchview_custom_shape"
                     android:orientation="horizontal"
-                    android:background="@drawable/searchview_custom_shape">
+                    app:layout_collapseMode="pin">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="25dp"
-                        android:src="@drawable/ic_search_icon_blue"/>
+                        android:src="@drawable/ic_search_icon_blue" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Search.."
-                        android:textSize="18sp"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginStart="16dp"/>
+                        android:layout_marginStart="16dp"
+                        android:text="Search.."
+                        android:textSize="18sp" />
                 </LinearLayout>
 
-
-
-            </LinearLayout>
-
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewpager_22"
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginTop="15dp"
-                android:paddingEnd="40dp"
-                android:paddingStart="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/LLheader"/>
-
-            <LinearLayout
-                android:id="@+id/LLViewPagerIndicator"
-                android:layout_width="70dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/viewpager_22"
-                app:layout_constraintStart_toStartOf="@+id/viewpager_22"
-                app:layout_constraintTop_toBottomOf="@id/viewpager_22" />
-
-            <TextView
-                android:id="@+id/tvTopCategories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/nunito_sans_extra_bold"
-                android:text="Top Categories"
-                android:textColor="@color/deep_blue"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.14"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/LLViewPagerIndicator" />
-
-            <Button
-                android:id="@+id/btnViewMore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#0A09427D"
-                android:layout_marginTop="43dp"
-                android:layout_marginStart="20dp"
-                android:text="@string/view_more"
-                app:layout_constraintVertical_bias="1"
-                android:textColor="@color/deep_blue"
-                android:textSize="12sp"
-                android:fontFamily="@font/poppins_medium"
-                android:padding="0dp"
-                android:minHeight="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.7"
-                app:layout_constraintStart_toEndOf="@+id/tvTopCategories"
-                app:layout_constraintTop_toBottomOf="@+id/LLViewPagerIndicator" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTopCategories">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerviewCategories"
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/topAppBar"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
                     android:layout_width="match_parent"
-                    android:clipToPadding="true"
-                    android:nestedScrollingEnabled="false"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="?attr/actionBarSize"
+                    android:elevation="0dp"
+                    app:layout_collapseMode="pin"
+                    app:menu="@menu/top_app_bar"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:contentDescription="@string/logo"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/tendo" />
+                    </LinearLayout>
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewpager_22"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/LLViewPagerIndicator"
+                        android:layout_width="70dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="@+id/viewpager_22"
+                        app:layout_constraintStart_toStartOf="@+id/viewpager_22"
+                        app:layout_constraintTop_toBottomOf="@id/viewpager_22" />
+
+                    <TextView
+                        android:id="@+id/tvTopCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/nunito_sans_extra_bold"
+                        android:text="Top Categories"
+                        android:textColor="@color/deep_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/LLViewPagerIndicator" />
+
+                    <Button
+                        android:id="@+id/btnViewMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="43dp"
+                        android:background="#0A09427D"
+                        android:fontFamily="@font/poppins_medium"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="@string/view_more"
+                        android:textColor="@color/deep_blue"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.7"
+                        app:layout_constraintStart_toEndOf="@+id/tvTopCategories"
+                        app:layout_constraintTop_toBottomOf="@+id/LLViewPagerIndicator"
+                        app:layout_constraintVertical_bias="1" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTopCategories">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerviewCategories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="true"
+                            android:nestedScrollingEnabled="false" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAllProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/nunito_sans_extra_bold"
+                        android:text="All products"
+                        android:textColor="@color/deep_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@+id/tvTopCategories"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerviewProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAllProducts" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvAllProducts"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/nunito_sans_extra_bold"
-                android:text="All products"
-                android:textColor="@color/deep_blue"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-                app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toStartOf="@+id/tvTopCategories"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerviewProducts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAllProducts" />
+        </androidx.core.widget.NestedScrollView>
 
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--            android:id="@+id/fab"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:contentDescription="TODO"-->
+        <!--            android:layout_marginTop="86dp"-->
+        <!--            app:layout_anchor="@id/app_bar"-->
+        <!--            app:layout_anchorGravity="center"-->
+        <!--            app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </ScrollView>
-
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>

@@ -10,11 +10,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentSignUpBinding
+import com.google.android.material.datepicker.MaterialDatePicker
 
 class SignUpFragment : Fragment() {
 
@@ -57,6 +59,25 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_accountActivationFragment)
+        }
+    }
+
+    fun onRadioButtonClicked(view: View) {
+        if (view is RadioButton) {
+            // Is the button now checked?
+            val checked = view.isChecked
+
+            // Check which radio button was clicked
+            when (view.getId()) {
+                R.id.male ->
+                    if (checked) {
+                        // Pirates are the best
+                    }
+                R.id.female ->
+                    if (checked) {
+                        // Ninjas rule
+                    }
+            }
         }
     }
 }

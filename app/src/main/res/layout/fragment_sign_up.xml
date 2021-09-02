@@ -19,7 +19,7 @@
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:background="@color/deep_blue"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="60dp"
-                        android:layout_margin="20dp"
+                        android:layout_margin="18dp"
                         android:contentDescription="logo"
                         android:scaleType="fitEnd"
                         android:src="@drawable/tendo" />
@@ -44,7 +44,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="28dp"
-                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/poppins_bold"
                         android:text="Let's Get Started"
                         android:textColor="@color/white"
@@ -75,158 +74,237 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvText"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/create_a_new_account"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginTop="30dp"
-                android:textColor="@color/text_create_account"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@id/TILName"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                android:orientation="vertical"
+                android:gravity="center"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_a_new_account"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/text_create_account"
+                    android:textSize="16sp"
+                    />
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TILName"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:foregroundTint="@color/deep_blue"
-                android:hint="@string/full_name"
-                android:textColorHint="@color/primary"
-                app:boxStrokeColor="@color/text_create_account"
-                app:boxStrokeErrorColor="#FF0C0C"
-                app:counterTextColor="@color/text_create_account"
-                app:endIconTint="#CA0909"
-                app:helperTextTextColor="@color/text_create_account"
-                app:hintTextColor="@color/deep_blue"
-                app:layout_constraintEnd_toEndOf="@id/tvText"
-                app:layout_constraintStart_toStartOf="@id/tvText"
-                app:layout_constraintTop_toBottomOf="@id/tvText"
-                app:placeholderTextColor="@color/text_create_account"
-                app:prefixTextColor="@color/deep_blue"
-                app:startIconDrawable="@drawable/ic_name_icon"
-                app:startIconTint="@color/color_icons">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etName"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TILName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary"
-                    android:textColorHighlight="@color/primary"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:foregroundTint="@color/deep_blue"
+                    android:hint="@string/full_name"
                     android:textColorHint="@color/primary"
-                    android:textColorLink="@color/primary" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    app:boxStrokeColor="@color/text_create_account"
+                    app:boxStrokeErrorColor="#FF0C0C"
+                    app:counterTextColor="@color/text_create_account"
+                    app:endIconTint="#CA0909"
+                    app:helperTextTextColor="@color/text_create_account"
+                    app:hintTextColor="@color/deep_blue"
+                    app:placeholderTextColor="@color/text_create_account"
+                    app:prefixTextColor="@color/deep_blue"
+                    app:startIconDrawable="@drawable/ic_name_icon"
+                    app:startIconTint="@color/color_icons">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TILEmail"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Your Email"
-                android:textColorHint="@color/primary"
-                app:boxStrokeColor="@color/text_create_account"
-                app:layout_constraintEnd_toEndOf="@id/TILName"
-                app:layout_constraintStart_toStartOf="@id/TILName"
-                app:layout_constraintTop_toBottomOf="@id/TILName"
-                app:startIconDrawable="@drawable/ic_email_icon"
-                app:startIconTint="@color/color_icons">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:textColorHighlight="@color/primary"
+                        android:textColorHint="@color/primary"
+                        android:textColorLink="@color/primary" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="28dp"
+                    android:background="@drawable/border_edit_text"
+                    android:padding="6dp"
+                    android:shadowRadius="20">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_gender"
+                        android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TILPhoneNumber"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:hint="Phone Number"
-                android:textColorHint="@color/primary"
-                app:boxStrokeColor="@color/text_create_account"
-                app:layout_constraintEnd_toEndOf="@id/TILEmail"
-                app:layout_constraintStart_toStartOf="@id/TILEmail"
-                app:layout_constraintTop_toBottomOf="@id/TILEmail"
-                app:startIconDrawable="@drawable/ic_baseline_phone_iphone_24"
-                app:startIconTint="@color/color_icons">
+                    </androidx.appcompat.widget.AppCompatImageView>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPhone"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textColor="@color/primary"
+                        android:layout_marginLeft="16dp"
+                        style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+                        />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layoutMode="opticalBounds"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="male"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="female"
+                            android:textColor="@color/colorPrimary" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_date_of_birth"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:foregroundTint="@color/deep_blue"
+                        android:hint="Date of birth"
+                        android:textColorHint="@color/primary"
+                        app:boxStrokeColor="@color/text_create_account"
+                        app:boxStrokeErrorColor="#FF0C0C"
+                        app:counterTextColor="@color/text_create_account"
+                        app:endIconTint="#CA0909"
+                        app:helperTextTextColor="@color/text_create_account"
+                        app:hintTextColor="@color/deep_blue"
+                        app:placeholderTextColor="@color/text_create_account"
+                        app:prefixTextColor="@color/deep_blue"
+                        app:startIconDrawable="@drawable/ic_name_icon"
+                        app:startIconTint="@color/color_icons">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textColorHighlight="@color/primary"
+                            android:textColorHint="@color/primary"
+                            android:textColorLink="@color/primary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TILEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primary" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Your Email"
+                    android:textColorHint="@color/primary"
+                    app:boxStrokeColor="@color/text_create_account"
+                    app:startIconDrawable="@drawable/ic_email_icon"
+                    app:startIconTint="@color/color_icons">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TILPassword"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="15dp"
-                android:hint="Password"
-                app:startIconTint="@color/color_icons"
-                app:boxStrokeColor="@color/text_create_account"
-                android:textColorHint="@color/primary"
-                app:endIconMode="password_toggle"
-                app:startIconDrawable="@drawable/ic_lock_icon"
-                app:layout_constraintTop_toBottomOf="@id/TILPhoneNumber"
-                app:layout_constraintStart_toStartOf="@id/TILPhoneNumber"
-                app:layout_constraintEnd_toEndOf="@id/TILPhoneNumber">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    android:inputType="textPassword"
-                    android:textColor="@color/primary"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TILPhoneNumber"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="Phone Number"
+                    android:textColorHint="@color/primary"
+                    app:boxStrokeColor="@color/text_create_account"
+                    app:startIconDrawable="@drawable/ic_baseline_phone_iphone_24"
+                    app:startIconTint="@color/color_icons">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TILPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Password"
+                    app:startIconTint="@color/color_icons"
+                    app:boxStrokeColor="@color/text_create_account"
+                    android:textColorHint="@color/primary"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_lock_icon">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:inputType="textPassword"
+                        android:textColor="@color/primary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/button_background_shape" />
+
+                <TextView
+                    android:id="@+id/tvAlreadyHaveAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_create_account"
+                    android:text="Already have an account? "
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+                    app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+            </LinearLayout>
 
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSignUp"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:text="Sign Up"
-                android:gravity="center|center_vertical|center_horizontal"
-                android:textColor="@color/white"
-                android:fontFamily="@font/poppins_bold"
-                android:textSize="15sp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/button_background_shape"
-                app:layout_constraintEnd_toEndOf="@+id/TILPassword"
-                app:layout_constraintStart_toStartOf="@+id/TILPassword"
-                app:layout_constraintTop_toBottomOf="@+id/TILPassword" />
-
-            <TextView
-                android:id="@+id/tvAlreadyHaveAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_create_account"
-                android:text="Already have an account? "
-                android:fontFamily="@font/poppins_regular"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
-                app:layout_constraintStart_toStartOf="@+id/btnSignUp"
-                app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline3"
