@@ -12,28 +12,26 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentSplashScreenBinding
+import android.os.HandlerThread
+import kotlinx.coroutines.*
+
 
 class SplashScreenFragment : Fragment() {
 
     lateinit var binding:FragmentSplashScreenBinding
+    val activityScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        Handler(Looper.getMainLooper()).postDelayed(
-//            {
-////                if (onBoardingFinished()){
-////                    findNavController().navigate(R.id.action_splashScreenFragment_to_signUpFragment)
-////                }else{
-//                    findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
-////                }
-//            },
-//            1500
-//        )
-        Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
-        }, 3000) // 3000 is the delayed time in milliseconds.
+
+
+            activityScope.launch {
+                delay(2000)
+                findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
+            }
+
 
 
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_splash_screen, container, false)
@@ -44,6 +42,11 @@ class SplashScreenFragment : Fragment() {
     private fun onBoardingFinished(): Boolean{
         val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished", false)
+    }
+
+    override fun onPause() {
+        activityScope.cancel()
+        super.onPause()
     }
 
 }

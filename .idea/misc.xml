@@ -5,8 +5,10 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/button_background_shape.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_phone_iphone_24.xml" value="0.18055555555555555" />
+        <entry key="app/src/main/res/drawable-v24/ic_cart.xml" value="0.15092592592592594" />
         <entry key="app/src/main/res/drawable-v24/ic_lock_icon.xml" value="0.18055555555555555" />
         <entry key="app/src/main/res/drawable-v24/ic_name_icon.xml" value="0.32916666666666666" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.15092592592592594" />
         <entry key="app/src/main/res/layout-xxxhdpi/fragment_first_screen.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_product.xml" value="0.1" />
@@ -16,6 +18,8 @@
         <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.43502202643171806" />
         <entry key="app/src/main/res/layout/fragment_splash_screen.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/item_image_slider.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/item_image_viewpager.xml" value="0.18020833333333333" />
       </map>
     </option>
   </component>
