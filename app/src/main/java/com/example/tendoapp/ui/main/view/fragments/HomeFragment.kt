@@ -8,6 +8,8 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
@@ -24,6 +26,7 @@ import com.example.tendoapp.data.model.SliderItem
 import com.example.tendoapp.databinding.FragmentHomeBinding
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapter
 import com.example.tendoapp.ui.main.adapter.ImageSliderAdapter
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlin.math.abs
 
@@ -43,6 +46,8 @@ class HomeFragment : Fragment() {
 
     lateinit var binding:FragmentHomeBinding
     val TAG="HomeFragment"
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -64,6 +69,7 @@ class HomeFragment : Fragment() {
         showAllProducts();
         super.onViewCreated(view, savedInstanceState)
     }
+
 
     private fun showTopCategories(){
 

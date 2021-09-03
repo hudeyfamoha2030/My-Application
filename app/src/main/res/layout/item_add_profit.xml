@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/border_edit_text"
+        android:layout_marginRight="@dimen/font_size_24"
+        android:layout_marginLeft="@dimen/font_size_24"
+        android:layout_marginBottom="@dimen/font_size_24"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/font_size_24"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_bold"
+                android:text="Add profit"
+                android:textColor="@color/deep_blue"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_semibold"
+                android:textColor="@color/secondary"
+                android:paddingTop="6dp"
+                android:text="₵67.90"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            <com.google.android.material.slider.Slider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundTint="#BC3F3F"
+                android:valueFrom="0.0"
+                android:valueTo="100.0"
+                app:haloColor="@color/background_button"
+                app:thumbColor="@color/background_button"
+                app:tickColorInactive="@color/background_button"
+                app:trackColorActive="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

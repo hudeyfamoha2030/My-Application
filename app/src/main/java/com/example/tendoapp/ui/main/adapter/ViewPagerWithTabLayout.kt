@@ -17,13 +17,13 @@ class ViewPagerWithTabLayout(fm: FragmentManager, context: Context): FragmentSta
 
         when(position){
             0-> {return "Info"}
-            1-> {return "Reviews"}
+//            1-> {return "Reviews"}
         }
         return super.getPageTitle(position)
     }
 
     override fun getCount(): Int {
-        return 2
+        return 1
     }
 
     override fun getItem(position: Int): Fragment {
@@ -32,10 +32,10 @@ class ViewPagerWithTabLayout(fm: FragmentManager, context: Context): FragmentSta
                 val logintabfragment= InfoTabFragment()
                 return logintabfragment
             }
-            1->{
-                val signuptabfragment= ReviewsTabFragment()
-                return signuptabfragment
-            }
+//            1->{
+//                val signuptabfragment= ReviewsTabFragment()
+//                return signuptabfragment
+//            }
 
         }
         return null!!

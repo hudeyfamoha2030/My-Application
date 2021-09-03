@@ -10,9 +10,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="5dp"
-        android:padding="5dp">
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        android:foreground="@drawable/border_card"
+        android:layout_margin="6dp"
+        android:padding="6dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,7 +29,7 @@
                 <ImageView
                     android:id="@+id/image"
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="150dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/tisho"/>
 
@@ -38,27 +41,32 @@
                     android:layout_gravity="top">
 
                     <ImageView
-                        android:layout_height="30dp"
-                        android:layout_width="30dp"
+                        android:layout_height="36dp"
+                        android:layout_width="wrap_content"
                         android:id="@+id/iv_rating"
                         android:src="@drawable/ic_star_rate"/>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:elevation="10sp"
-                    android:layout_marginRight="12dp"
-                    android:layout_gravity="bottom|end">
 
-                    <ImageView
-                        android:layout_height="wrap_content"
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                         android:layout_width="wrap_content"
-                        android:id="@+id/iv_share"
-                        android:src="@drawable/ic_shareee"/>
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="center"
+                        app:borderWidth="0dp"
+                        app:collapsedSize="36dp"
+                        app:fabCustomSize="24dp"
+                        app:icon="@drawable/ic_share"
+                        app:iconSize="18dp"
+                        app:iconTint="@color/primary"
+                        app:tint="@color/primary" />
 
-                </LinearLayout>
 
             </FrameLayout>
 
@@ -72,34 +80,46 @@
                     android:id="@+id/value"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_toStartOf="@id/cart"
+                    android:fontFamily="@font/nunito_sans_regular"
+                    android:paddingBottom="4dp"
                     android:text="White Cotton Shirt"
-                    android:layout_toLeftOf="@id/cart"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
-                    android:layout_marginLeft="25dp"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#979797" />
 
                 <TextView
                     android:id="@+id/price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:text="₵67.90"
-                    android:layout_toLeftOf="@id/cart"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="12sp"
                     android:layout_marginLeft="25dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:paddingTop="6dp"
+                    android:text="₵67.90"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#171717"
+                    android:textStyle="bold" />
 
-                <ImageView
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                     android:id="@+id/cart"
-                    android:layout_width="30dp"
-                    android:layout_height="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_cart"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="0dp"
+                    android:tint="#ffff"
+                    app:borderWidth="0dp"
+                    app:collapsedSize="36dp"
+                    app:icon="@drawable/ic_shopping_cart"
+                    app:iconSize="18dp"
+                    app:iconTint="@color/white"
+                    app:srcCompat="@drawable/ic_shopping_cart"
+                    app:tint="#ffff" />
 
             </RelativeLayout>
 

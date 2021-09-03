@@ -23,10 +23,6 @@ class AccountFragment : Fragment() {
 
         // This callback will only be called when MyFragment is at least Started.
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
-
-            // Handle the back button event
-        }
 
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_account, container, false)

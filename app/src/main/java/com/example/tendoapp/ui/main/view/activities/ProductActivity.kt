@@ -2,9 +2,12 @@ package com.example.tendoapp.ui.main.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -13,13 +16,17 @@ import com.example.tendoapp.R
 import com.example.tendoapp.databinding.ActivityProductBinding
 import com.example.tendoapp.ui.main.adapter.ViewPagerImageAdapter
 import com.example.tendoapp.ui.main.adapter.ViewPagerWithTabLayout
+import com.example.tendoapp.ui.main.view.fragments.CustomBottomSheetDialogFragment
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_product.*
+import kotlinx.android.synthetic.main.layout_share_item_bottom_sheet.*
 
 class ProductActivity : AppCompatActivity() {
     lateinit var binding:ActivityProductBinding
     lateinit var indicatorContainer: LinearLayout
     private var imageList = mutableListOf<Int>()
+    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +49,7 @@ class ProductActivity : AppCompatActivity() {
         (binding.viewPagerShowProducts.getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         setUpIndicators()
         setCurrentIndicator(0)
+        setUpBottomSheetSharing()
 
     }
 
@@ -113,6 +121,36 @@ class ProductActivity : AppCompatActivity() {
         addToList(R.drawable.tisho2)
         addToList(R.drawable.tisho3)
         addToList(R.drawable.tisho4)
+    }
+
+
+    private fun setUpBottomSheetSharing(){
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
+
+        bottomSheetBehavior.addBottomSheetCallback(object :
+            BottomSheetBehavior.BottomSheetCallback() {
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                // handle onSlide
+            }
+
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when (newState) {
+                    BottomSheetBehavior.STATE_COLLAPSED -> Toast.makeText(this@ProductActivity, "STATE_COLLAPSED", Toast.LENGTH_SHORT).show()
+                    BottomSheetBehavior.STATE_EXPANDED -> Toast.makeText(this@ProductActivity, "STATE_EXPANDED", Toast.LENGTH_SHORT).show()
+                    BottomSheetBehavior.STATE_DRAGGING -> Toast.makeText(this@ProductActivity, "STATE_DRAGGING", Toast.LENGTH_SHORT).show()
+                    BottomSheetBehavior.STATE_SETTLING -> Toast.makeText(this@ProductActivity, "STATE_SETTLING", Toast.LENGTH_SHORT).show()
+                    BottomSheetBehavior.STATE_HIDDEN -> Toast.makeText(this@ProductActivity, "STATE_HIDDEN", Toast.LENGTH_SHORT).show()
+                    else -> Toast.makeText(this@ProductActivity, "OTHER_STATE", Toast.LENGTH_SHORT).show()
+                }
+            }
+        })
+
+        btn_share_product.setOnClickListener {
+            CustomBottomSheetDialogFragment().apply {
+                show(supportFragmentManager, CustomBottomSheetDialogFragment.TAG)
+            }
+        }
     }
 
 }
