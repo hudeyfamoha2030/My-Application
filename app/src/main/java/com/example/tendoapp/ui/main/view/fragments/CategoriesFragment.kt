@@ -1,12 +1,16 @@
 package com.example.tendoapp.ui.main.view.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.tendoapp.R
 import com.example.tendoapp.data.model.Category
 import com.example.tendoapp.databinding.FragmentCategoriesBinding
@@ -14,13 +18,14 @@ import com.example.tendoapp.databinding.FragmentInfoTabBinding
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapter
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapterHome
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapterMain
+import com.example.tendoapp.ui.main.adapter.ParentAdapter
+import com.example.tendoapp.utils.objects.ParentDataFactory
+import kotlinx.android.synthetic.main.fragment_categories.*
 
 class  CategoriesFragment : Fragment() {
 
+    lateinit var recyclerView: RecyclerView
     lateinit var binding: FragmentCategoriesBinding
-    private var dataListCategory = mutableListOf<Category>()
-    private lateinit var categoriesAdapterHome: CategoriesAdapterHome
-    private lateinit var categoriesAdapterMain: CategoriesAdapterMain
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,58 +33,24 @@ class  CategoriesFragment : Fragment() {
     ): View? {
         binding= DataBindingUtil.inflate(inflater, R.layout.fragment_categories, container, false)
 
+        initRecycler()
 
         return binding.root
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        showTopCategories()
+    @SuppressLint("WrongConstant")
 
-        showTopCategoriesWomen()
+    private fun initRecycler(){
+        recyclerView = rv_parent
 
-    }
-
-    override fun onStart() {
-        super.onStart()
-        showTopCategories()
-
-        showTopCategoriesWomen()
-    }
-
-
-    private fun showTopCategories(){
-
-        dataListCategory.add(Category("Man work equipments", R.drawable.ic_category_man_work_equipment))
-        dataListCategory.add(Category("Man pants", R.drawable.ic_category_man_pants))
-        dataListCategory.add(Category("Man shirts", R.drawable.ic_category_man_shirt))
-        dataListCategory.add(Category("Man shoes", R.drawable.ic_category_man_shoes))
-        dataListCategory.add(Category("Underwear", R.drawable.ic_category_man_underwear))
-
-        binding.recyclerviewCategoriesHome.layoutManager= GridLayoutManager(context,1)
-        categoriesAdapterMain = CategoriesAdapterMain(requireContext())
-        categoriesAdapterMain.setDataList(dataListCategory)
-
-        binding.recyclerviewCategoriesHome.adapter = categoriesAdapterMain
-
-    }
-    private fun showTopCategoriesWomen(){
-
-        dataListCategory.add(Category("Bags", R.drawable.ic_category_woman_bag))
-        dataListCategory.add(Category("Woman pants", R.drawable.ic_category_woman_pants))
-        dataListCategory.add(Category("Shoes", R.drawable.ic_category_woman_shoes))
-        dataListCategory.add(Category("Dresses", R.drawable.ic_category_dress))
-        dataListCategory.add(Category("Woman pants", R.drawable.ic_category_woman_pants))
-        dataListCategory.add(Category("Shoes", R.drawable.ic_category_bikini))
-        dataListCategory.add(Category("Dresses", R.drawable.ic_category_dress))
-
-        binding.recyclerviewCategoriesHomeWomen.layoutManager= GridLayoutManager(context,3)
-        categoriesAdapterHome = CategoriesAdapterHome(requireContext())
-        categoriesAdapterHome.setDataList(dataListCategory)
-
-        binding.recyclerviewCategoriesHomeWomen.adapter = categoriesAdapterHome
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayout.VERTICAL, false)
+            adapter = ParentAdapter(
+                ParentDataFactory
+                .getParents(5))
+        }
 
     }
 
 
-
-}
+    }

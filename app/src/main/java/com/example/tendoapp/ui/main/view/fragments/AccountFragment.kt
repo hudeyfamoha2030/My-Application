@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentAccountBinding
+import com.example.tendoapp.ui.main.view.activities.OrderActivity
 import com.example.tendoapp.ui.main.view.activities.ProfileActivity
 import kotlinx.android.synthetic.main.fragment_account.*
 
@@ -29,6 +30,10 @@ class AccountFragment : Fragment() {
 
         binding.tvProfile.setOnClickListener {
             this.startActivity(Intent(context,ProfileActivity::class.java))
+
+        }
+        binding.tvOrders.setOnClickListener {
+            this.startActivity(Intent(context,OrderActivity::class.java))
 
         }
         return binding.root
