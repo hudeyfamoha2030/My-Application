@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.view.activities.UserActivity"></activity>
+        <activity
+            android:name=".ui.main.view.activities.OrdersActivity"
+            android:exported="true"
+            android:label="@string/title_activity_orders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.main.view.activities.UserActivity" />
         <activity android:name=".ui.main.view.activities.ProfileActivity" />
-        android:theme="@style/AppTheme">
-
         <activity
             android:name=".ui.main.view.activities.TestActivity"
             android:exported="true"
@@ -26,7 +29,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".ui.main.view.activities.ProfileActivity"/>
+        <activity android:name=".ui.main.view.activities.ProfileActivity" />
         <activity android:name=".ui.main.view.activities.ProductActivity" />
         <activity android:name=".SearchResultsActivity" />
         <activity android:name=".ui.main.view.activities.MainActivity2" />

@@ -25,5 +25,6 @@
 
     <color name="color_icons">#9098B1</color>
     <color name="tv_receipt_title">#9098B1</color>
+    <color name="background_color">#EFEFEF</color>
 
 </resources>

@@ -3,11 +3,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color"
     tools:context=".ui.main.view.fragments.CategoriesFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background_color"
         android:fitsSystemWindows="true">
 
 
@@ -41,16 +43,17 @@
                             android:layout_height="match_parent"
                             android:background="@color/material_on_surface_stroke"
                             android:orientation="vertical"
-                            app:layout_constraintGuide_percent="0.3" />
+                            app:layout_constraintGuide_percent="0.26" />
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@color/material_on_surface_stroke"
                             android:orientation="vertical"
-                            android:gravity="center"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_margin="@dimen/dimen_0"
+                            android:padding="@dimen/dimen_0"
                             app:layout_constraintRight_toLeftOf="@+id/center_guideline"
                             app:layout_constraintTop_toTopOf="parent">
                             <TextView
@@ -61,12 +64,12 @@
                                 android:textColor="@color/primary"
                                 android:fontFamily="@font/poppins_bold"
                                 android:padding="12dp"/>
+
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerviewCategoriesHome"
-                                android:layout_gravity="center"
-                                android:background="@color/white"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:clipToPadding="true"
                                 android:nestedScrollingEnabled="false" />
 
@@ -82,7 +85,7 @@
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:background="#EFEFEF"
+                            android:background="@color/background_color"
                             android:orientation="vertical"
                             app:layout_constraintBottom_toBottomOf="parent"
                             android:layout_margin="1dp"
@@ -106,7 +109,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_marginStart="4dp"
                                 android:layout_marginEnd="4dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:clipToPadding="true"
                                 android:nestedScrollingEnabled="false" />
 
