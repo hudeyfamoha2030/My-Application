@@ -18,15 +18,16 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:backgroundTint="@color/white"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="20dp"
+                android:id="@+id/Arrow_backword"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
                 android:layout_marginTop="20dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_back"/>
@@ -40,8 +41,8 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/nunito_sans_bold"
                 android:gravity="center_horizontal"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"/>
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -49,7 +50,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_below="@id/toolbar">
 
@@ -289,7 +290,7 @@
                 android:id="@+id/Edit_Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/ratings_button"

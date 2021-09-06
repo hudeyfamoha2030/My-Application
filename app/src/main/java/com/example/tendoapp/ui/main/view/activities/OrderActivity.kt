@@ -18,5 +18,9 @@ class OrderActivity : AppCompatActivity() {
             val intent = Intent(this, OrderDetailsActivity::class.java)
             startActivity(intent)
         }
+
+        Image_backword.setOnClickListener {
+            finish()
+        }
     }
 }

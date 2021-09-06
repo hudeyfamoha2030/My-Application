@@ -22,7 +22,7 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        textview_profile.setOnClickListener {
+        Arrow_backword.setOnClickListener {
             finish()
         }
 
