@@ -12,8 +12,6 @@ import com.example.tendoapp.R
 import com.example.tendoapp.data.model.Data
 import com.example.tendoapp.databinding.FragmentCategoriesBinding
 import com.example.tendoapp.ui.main.adapter.RecyclerViewAdapter
-import kotlinx.android.synthetic.main.fragment_categories.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class  CategoriesFragment : Fragment() {
 
