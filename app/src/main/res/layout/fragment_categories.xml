@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.main.view.fragments.CategoriesFragment">
+    tools:context=".ui.main.view.fragments.ExploreFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        >
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -20,104 +20,23 @@
             app:elevation="0dp">
 
 
+
             <include layout="@layout/toolbar_main_home" />
+
 
 
         </com.google.android.material.appbar.AppBarLayout>
 
-            <LinearLayout
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_Category"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:orientation="vertical">
+                android:layout_height="match_parent" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/center_guideline"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:background="@color/material_on_surface_stroke"
-                            android:orientation="vertical"
-                            app:layout_constraintGuide_percent="0.26" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/material_on_surface_stroke"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            android:layout_margin="@dimen/dimen_0"
-                            android:padding="@dimen/dimen_0"
-                            app:layout_constraintRight_toLeftOf="@+id/center_guideline"
-                            app:layout_constraintTop_toTopOf="parent">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Categories"
-                                android:textSize="12sp"
-                                android:textColor="@color/primary"
-                                android:fontFamily="@font/poppins_bold"
-                                android:padding="12dp"/>
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/recyclerviewCategoriesHome"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:clipToPadding="true"
-                                android:nestedScrollingEnabled="false" />
-
-                        </LinearLayout>
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="#EFEFEF"
-                            app:layout_constraintRight_toLeftOf="@id/center_guideline"
-                            app:layout_constraintLeft_toRightOf="@id/center_guideline"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/background_color"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_margin="1dp"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintLeft_toRightOf="@+id/center_guideline"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="View all "
-                                android:fontFamily="@font/nunito_sans_extra_bold"
-                                android:textColor="@color/deep_blue"
-                                android:textSize="12sp"
-                                android:layout_margin="4dp"
-                                android:background="@color/white"
-                                android:padding="12dp"/>
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:background="@color/white"
-                                android:id="@+id/recyclerviewCategoriesHomeWomen"
-                                android:layout_width="match_parent"
-                                android:layout_marginStart="4dp"
-                                android:layout_marginEnd="4dp"
-                                android:layout_height="wrap_content"
-                                android:clipToPadding="true"
-                                android:nestedScrollingEnabled="false" />
-
-                        </LinearLayout>
-
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-
+        </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -75,14 +75,14 @@
                     android:id="@+id/t2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My earnings"
-                    android:layout_toRightOf="@id/i2"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textColor="#223263"
-                    android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/i2"
+                    android:fontFamily="@font/poppins_bold"
+                    android:letterSpacing="0.02"
+                    android:text="My earnings"
+                    android:textColor="#223263"
+                    android:textSize="14sp" />
 
             </RelativeLayout>
 
@@ -111,7 +111,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
@@ -140,7 +140,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
@@ -169,7 +169,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
@@ -198,7 +198,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
@@ -227,7 +227,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
@@ -256,7 +256,7 @@
                     android:textColor="#223263"
                     android:letterSpacing="0.02"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="12dp"/>
+                    android:layout_marginTop="8dp"/>
 
             </RelativeLayout>
 
