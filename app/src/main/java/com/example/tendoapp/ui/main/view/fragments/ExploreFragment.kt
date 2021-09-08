@@ -9,7 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tendoapp.R
+import com.example.tendoapp.data.model.Category
 import com.example.tendoapp.data.model.Data
+import com.example.tendoapp.data.model.Product
 import com.example.tendoapp.databinding.FragmentExploreBinding
 import com.example.tendoapp.ui.main.adapter.RecyclerViewAdapter
 
@@ -26,22 +28,29 @@ class ExploreFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_explore, container, false)
 
         val dataList = ArrayList<Data>()
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "1. Hi! I am in View 1"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "2. Hi! I am in View 2"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "3. Hi! I am in View 3"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "4. Hi! I am in View 4"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "5. Hi! I am in View 5"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "6. Hi! I am in View 6"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "7. Hi! I am in View 7"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "8. Hi! I am in View 8"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "9. Hi! I am in View 9"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "10. Hi! I am in View 10"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "11. Hi! I am in View 11"))
-        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "12. Hi! I am in View 12"))
+
+        val categoryList = ArrayList<Category>()
+        var productsList1= ArrayList<Product>()
+
+        productsList1.add(Product("Timberland", "200", R.drawable.tisho3))
+        productsList1.add(Product("Airforce", "80", R.drawable.tisho3))
+        productsList1.add(Product("Airmax", "100", R.drawable.tisho3))
+        productsList1.add(Product("Supra", "2", R.drawable.tisho3))
+
+        categoryList.add(Category(1,"Shoes",R.drawable.tisho2,productsList1))
+        categoryList.add(Category(2,"Women favorites",R.drawable.tisho,productsList1))
+
+
+//
+//        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "Trending"))
+//        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "Trousers"))
+//        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_ONE, "Shops for you"))
+//        dataList.add(Data(RecyclerViewAdapter.VIEW_TYPE_TWO, "Favorites"))
+
 
         recyclerView = binding.recyclerViewExplore
 
-        val adapter = RecyclerViewAdapter(requireContext(), dataList)
+        val adapter = RecyclerViewAdapter(requireContext(), categoryList)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
 

@@ -40,14 +40,17 @@
                 android:textColor="@color/deep_blue"
                 android:layout_marginBottom="8dp"
                 android:textSize="18sp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/raleway_semibold"
-                android:textColor="@color/secondary"
+                android:fontFamily="@font/raleway_extrabold"
                 android:paddingTop="6dp"
                 android:text="₵67.90"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/secondary"
+                android:textFontWeight="@integer/material_motion_duration_long_1"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>

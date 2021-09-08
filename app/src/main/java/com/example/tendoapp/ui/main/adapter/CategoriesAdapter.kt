@@ -23,6 +23,7 @@ class CategoriesAdapter(var context: Context) : RecyclerView.Adapter<CategoriesA
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var btn : Button = itemView.btnCategory
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,7 +37,7 @@ class CategoriesAdapter(var context: Context) : RecyclerView.Adapter<CategoriesA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var data = dataList[position]
-        holder.btn.text = data.value
+        holder.btn.text = data.name
         val img: Drawable = this.context.resources.getDrawable(data.image)
         holder.btn.setCompoundDrawablesWithIntrinsicBounds(img, null, null, null)
     }

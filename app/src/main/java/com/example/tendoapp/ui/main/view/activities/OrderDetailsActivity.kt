@@ -24,8 +24,8 @@ class OrderDetailsActivity : AppCompatActivity() {
 
         //navigate to Profile activity
         arrow_back.setOnClickListener {
-            val intent = Intent(this, OrderActivity::class.java)
-            startActivity(intent)
+
+            onBackPressed()
         }
 
     }

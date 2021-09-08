@@ -73,10 +73,10 @@ class HomeFragment : Fragment() {
 
     private fun showTopCategories(){
 
-        dataListCategory.add(Category("Technology", R.drawable.ic_tech))
-        dataListCategory.add(Category("Pharmacy", R.drawable.ic_pharmacy))
-        dataListCategory.add(Category("Agriculture", R.drawable.ic_agri))
-        dataListCategory.add(Category("Accessories", R.drawable.ic_acess))
+        dataListCategory.add(Category(1,"Technology", R.drawable.ic_tech))
+        dataListCategory.add(Category(1,"Pharmacy", R.drawable.ic_pharmacy))
+        dataListCategory.add(Category(1,"Agriculture", R.drawable.ic_agri))
+        dataListCategory.add(Category(1,"Accessories", R.drawable.ic_acess))
 
         binding.recyclerviewCategories.layoutManager= GridLayoutManager(context,2)
         categoriesAdapter = CategoriesAdapter(requireContext())

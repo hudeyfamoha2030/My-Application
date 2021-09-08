@@ -91,46 +91,46 @@
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:layout_width="wrap_content"
-                android:layout_gravity="top|end"
                 android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginStart="250dp"
+                android:layout_toEndOf="@+id/i1"
                 android:backgroundTint="@color/white"
                 android:contentDescription="@string/app_name"
                 android:scaleType="center"
                 app:borderWidth="0dp"
                 app:collapsedSize="36dp"
-                android:layout_toEndOf="@+id/i1"
-                android:layout_marginStart="250dp"
                 app:fabCustomSize="24dp"
                 app:icon="@drawable/ic_red_love"
                 app:iconSize="18dp"
                 app:iconTint="#FF0000"
                 app:tint="@color/primary" />
+
             <TextView
                 android:id="@+id/tv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nike Air Zoom Pegasus \n36 Miami"
-                android:layout_toEndOf="@id/i1"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="#223263"
-                android:letterSpacing="0.02"
                 android:layout_marginLeft="15dp"
-                />
+                android:layout_toEndOf="@id/i1"
+                android:fontFamily="@font/poppins_bold"
+                android:letterSpacing="0.02"
+                android:text="Nike Air Zoom Pegasus \n36 Miami"
+                android:textColor="#223263"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/t4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$299,43"
-                android:layout_toEndOf="@id/i1"
                 android:layout_below="@+id/tv_profile"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins_bold"
-                android:textColor="#1099EE"
-                android:letterSpacing="0.02"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="15dp"/>
+                android:layout_toEndOf="@id/i1"
+                android:fontFamily="@font/poppins_bold"
+                android:letterSpacing="0.02"
+                android:text="$299,43"
+                android:textColor="#1099EE"
+                android:textSize="14sp" />
 
         </RelativeLayout>
 

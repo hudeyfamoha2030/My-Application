@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.view.fragments.CartFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+         android:layout_height="wrap_content">
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/recyclerViewMyCart"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:clipToPadding="true"
+             android:nestedScrollingEnabled="false" />
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btnGetStarted"
+             android:layout_width="match_parent"
+             android:layout_marginStart="24dp"
+             android:layout_marginEnd="24dp"
+             android:layout_height="wrap_content"
+             android:background="@drawable/button_background_shape"
+             android:text="Create Order"
+             android:visibility="visible"
+             android:textColor="@color/white"
+             android:fontFamily="@font/poppins_bold"
+             android:textSize="15sp"
+             android:paddingRight="24dp"
+             android:paddingLeft="24dp"
+             android:layout_marginBottom="24dp"/>
+     </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>

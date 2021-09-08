@@ -12,4 +12,6 @@
     <dimen name="dimen_16">16dp</dimen>
     <dimen name="dimen_32">32dp</dimen>
     <dimen name="dimen_60">60dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
 </resources>

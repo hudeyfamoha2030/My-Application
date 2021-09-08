@@ -21,21 +21,30 @@
         <entry key="app/src/main/res/drawable/view_scroller_bottom_sheet.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.13520749665327977" />
         <entry key="app/src/main/res/layout-xxxhdpi/fragment_first_screen.xml" value="0.21979166666666666" />
+        <entry key="app/src/main/res/layout/activity_cart.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_cart_order.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_order.xml" value="0.261149525800978" />
-        <entry key="app/src/main/res/layout/activity_product.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/activity_order_details.xml" value="0.15982776089159068" />
+        <entry key="app/src/main/res/layout/activity_product.xml" value="0.2981651376146789" />
         <entry key="app/src/main/res/layout/activity_test.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_test_main2.xml" value="0.228125" />
+        <entry key="app/src/main/res/layout/content_orders.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_account_activation.xml" value="0.15307971014492755" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.24728260869565216" />
+        <entry key="app/src/main/res/layout/fragment_cart_order.xml" value="0.22239583333333332" />
         <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3070652173913043" />
         <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.2375" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1640625" />
         <entry key="app/src/main/res/layout/fragment_first_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/fragment_info_tab.xml" value="0.28804347826086957" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/fragment_second_screen.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/fragment_shares.xml" value="0.2375" />
@@ -48,8 +57,13 @@
         <entry key="app/src/main/res/layout/item_category_type.xml" value="0.29466344610583967" />
         <entry key="app/src/main/res/layout/item_image_slider.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/item_image_viewpager.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/item_order.xml" value="0.29846014492753625" />
         <entry key="app/src/main/res/layout/item_product.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/item_product_cart.xml" value="0.31040564373897706" />
         <entry key="app/src/main/res/layout/item_show_receipt.xml" value="0.28804347826086957" />
+        <entry key="app/src/main/res/layout/item_view1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_view2.xml" value="0.14108451804184827" />
+        <entry key="app/src/main/res/layout/item_view_type_one.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/layout_share_item_bottom_sheet.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/product_page_item.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/recyclerview_layout.xml" value="0.375" />

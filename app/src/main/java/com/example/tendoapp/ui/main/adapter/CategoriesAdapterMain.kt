@@ -48,7 +48,7 @@ class CategoriesAdapterMain(var context: Context) : RecyclerView.Adapter<Categor
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var data = dataList[position]
-        holder.tv_name.text = data.value
+        holder.tv_name.text = data.name
         holder.img_icon.setImageResource(data.image)
         holder.linearLayout.setOnClickListener {
             CategoriesAdapterHome.last_position =position;

@@ -1,7 +1,13 @@
 package com.example.tendoapp.ui.main.view.activities
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.Color.red
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -21,12 +27,25 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.layout_share_item_bottom_sheet.*
+import kotlinx.android.synthetic.main.toolbar_main_home.*
+
+import com.google.android.material.badge.BadgeUtils
+
+import androidx.core.content.ContentProviderCompat.requireContext
+
+import com.google.android.material.badge.BadgeDrawable
+
+import androidx.annotation.NonNull
+import androidx.core.content.ContentProviderCompat
+import com.google.android.material.snackbar.Snackbar
+
 
 class ProductActivity : AppCompatActivity() {
     lateinit var binding:ActivityProductBinding
     lateinit var indicatorContainer: LinearLayout
     private var imageList = mutableListOf<Int>()
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
+    lateinit var badgeDrawable: BadgeDrawable
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,10 +66,38 @@ class ProductActivity : AppCompatActivity() {
         })
 
         (binding.viewPagerShowProducts.getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+        setUpTopBar()
         setUpIndicators()
         setCurrentIndicator(0)
         setUpBottomSheetSharing()
 
+
+    }
+    @SuppressLint("UnsafeOptInUsageError")
+    private fun setUpTopBar(){
+        topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.favorite -> {
+                    // Handle favorite icon press
+                    true
+                }
+                R.id.cart -> {
+
+                    val intent = Intent(this, CartOrderActivity::class.java)
+                    startActivity(intent)
+
+                    // Handle favorite icon press
+                    true
+                }
+                R.id.search -> {
+                    // Handle search icon press
+
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     private fun initTabLayout() {
@@ -124,6 +171,7 @@ class ProductActivity : AppCompatActivity() {
     }
 
 
+    @SuppressLint("UnsafeOptInUsageError")
     private fun setUpBottomSheetSharing(){
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
 
@@ -150,6 +198,20 @@ class ProductActivity : AppCompatActivity() {
             CustomBottomSheetDialogFragment().apply {
                 show(supportFragmentManager, CustomBottomSheetDialogFragment.TAG)
             }
+        }
+        btn_add_to_cart.setOnClickListener{
+            val badge = BadgeDrawable.create(this)
+            BadgeUtils.attachBadgeDrawable(badge, topAppBar, R.id.cart)
+            badge.backgroundColor= Color.parseColor("#FF0000")
+            badge.number=1
+
+            val snack = Snackbar.make(it,"Product added to cart",Snackbar.LENGTH_LONG)
+            snack.setAction("VIEW CART", View.OnClickListener {
+                val intent = Intent(this, CartOrderActivity::class.java)
+                startActivity(intent)
+
+            })
+            snack.show()
         }
     }
 

@@ -9,15 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.view.activities.UserActivity"></activity>
-        <activity android:name=".ui.main.view.activities.OrderDetailsActivity"></activity>
-        <activity android:name=".ui.main.view.activities.OrderActivity" />
-
-        <activity android:name=".ui.main.view.activities.ProfileActivity" />
-
-
         <activity
-            android:name=".ui.main.view.activities.TestActivity"
+            android:name=".ui.main.view.activities.CartOrderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_cart_order"
+        android:parentActivityName=".ui.main.view.activities.MainActivity2"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".ui.main.view.activities.MainActivity2" />
+        </activity>
+        <activity
+            android:name=".ui.main.view.activities.OrdersActivity"
+            android:exported="true" />
+        <activity android:name=".ui.main.view.activities.UserActivity" />
+        <activity android:name=".ui.main.view.activities.OrderDetailsActivity" />
+        <activity android:name=".ui.main.view.activities.OrderActivity" />
+        <activity android:name=".ui.main.view.activities.ProfileActivity" />
+        <activity
+            android:name=".ui.main.view.activities.CartActivity"
             android:exported="true"
             android:label="@string/title_activity_test"
             android:theme="@style/AppTheme.NoActionBar">
@@ -39,6 +49,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
