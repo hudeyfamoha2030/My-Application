@@ -50,7 +50,8 @@ class RecyclerViewAdapter(context: Context, list: ArrayList<Category>) :
         fun bind(position: Int) {
             val category = list[position]
             message.text = category.name
-            recyclerview.layoutManager= GridLayoutManager(context,2)
+
+            recyclerview.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, true)
             mySharesAdapter = MySharesAdapter(context)
             category.products?.let { mySharesAdapter.setDataList(it) }
             recyclerview.adapter = mySharesAdapter
