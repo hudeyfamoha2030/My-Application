@@ -141,4 +141,8 @@
     <string name="tab_text_2">My Orders</string>
     <string name="checkout">Checkout</string>
     <string name="order_id">LQNSU346JK</string>
+    <string name="title_activity_check_out_order">Check Out Order</string>
+    <string name="create_order">Create Order</string>
+    <string name="helloo_cart">My cart</string>
+    <string name="helloo_customer">Customer</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.tendoapp.ui.main.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,9 @@ import com.example.tendoapp.R
 import com.example.tendoapp.data.model.Category
 import com.example.tendoapp.ui.main.adapter.CategoriesAdapterHome
 import com.example.tendoapp.ui.main.adapter.MyCartAdapter
+import com.example.tendoapp.ui.main.view.activities.CheckOutOrderActivity
+import com.example.tendoapp.ui.main.view.activities.OrderDetailsActivity
+import com.example.tendoapp.ui.main.view.activities.ProfileActivity
 import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.fragment_categories.*
 import kotlinx.android.synthetic.main.fragment_categories.recyclerviewCategoriesHome
@@ -72,6 +76,10 @@ class CartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         showTopCategories()
+        btn_create_order.setOnClickListener{
+            val intent = Intent(context, CheckOutOrderActivity::class.java)
+            startActivity(intent)
+        }
     }
     private fun showTopCategories(){
 
