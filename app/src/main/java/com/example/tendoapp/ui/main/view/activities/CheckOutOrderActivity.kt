@@ -70,7 +70,7 @@ class CheckOutOrderActivity : AppCompatActivity() {
                 }
             }
         }
-            binding.viewpager.setUserInputEnabled(false);
+//            binding.viewpager.setUserInputEnabled(true);
             binding.viewpager.registerOnPageChangeCallback(viewpagerCallback)
         }
 
