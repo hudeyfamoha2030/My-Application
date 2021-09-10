@@ -1,14 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.view.fragments.OrderMyCartFragment">
+    android:background="#C2BEBE">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/helloo_cart" />
+        android:id="@+id/tv_order_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="24dp"
+        android:text="ORDER ITEMS"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunito_sans_extra_bold"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:background="@drawable/my_cart_order_background"
+        android:padding="24sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_items"
+        tools:layout_editor_absoluteX="12dp">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/tisho"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/guideline4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:fontFamily="@font/nunito_sans_bold"
+            android:gravity="start"
+            android:text="@string/oversized_denim_t_shirt"
+            android:textColor="@color/deep_blue"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/img_icon"
+            app:layout_constraintRight_toLeftOf="@+id/floating_btn_delete"
+            app:layout_constraintTop_toTopOf="@+id/img_icon" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floating_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:elevation="0dp"
+            android:scaleType="center"
+            app:borderWidth="0dp"
+            app:collapsedSize="36dp"
+            app:elevation="@dimen/dimen_0"
+            app:fabCustomSize="18dp"
+            app:icon="@drawable/ic_delete"
+            app:iconSize="18dp"
+            app:iconTint="@color/primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/font_size_24"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/floating_btn_delete">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp">
+
+                <Button
+                    android:id="@+id/btnAddQuantity"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/baseline_add_circle_primary_24dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+
+                android:fontFamily="@font/raleway_semibold"
+                android:text="01"
+                android:textColor="#B17248"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnSubtractQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/baseline_remove_circle_primary_24dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/font_size_24"
+            android:layout_weight="1"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="start"
+            android:paddingTop="6dp"
+            android:text="₵67.90"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/secondary"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/img_icon"
+            app:layout_constraintRight_toLeftOf="@+id/linearLayout4"
+
+            app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:background="@drawable/my_cart_order_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="30dp"
+            android:hint="Enter Cupon Code"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ratings_button"
+            app:layout_constraintRight_toLeftOf="@id/editName"
+            android:text="Reply"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
+        android:background="@drawable/my_cart_order_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text"
+        android:layout_margin="12sp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/font_size_24"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="start"
+                    android:text="Item/s (1)"
+                    android:textColor="@color/tv_receipt_title"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end"
+                    android:paddingTop="6dp"
+                    android:text="₵67.90"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/secondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="start"
+                    android:text="Coupon discount"
+                    android:textColor="@color/tv_receipt_title"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="end"
+                    android:paddingTop="6dp"
+                    android:text="₵0.00"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/secondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="12sp"
+                android:layout_marginBottom="12sp"
+                android:background="@drawable/dotted_receipt"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12sp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_sans_extra_bold"
+                    android:gravity="start"
+                    android:text="Total price"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:gravity="end"
+                    android:paddingTop="6dp"
+                    android:text="₵67.90"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/secondary" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
