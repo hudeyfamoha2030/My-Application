@@ -299,7 +299,7 @@
 
 
         <Button
-            android:id="@+id/Edit_Order_Button"
+            android:id="@+id/Notify_Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

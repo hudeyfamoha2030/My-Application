@@ -1,20 +1,13 @@
 package com.example.tendoapp.ui.main.view.activities
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.example.tendoapp.databinding.ActivityCartOrderBinding
 import com.example.tendoapp.ui.main.adapter.ViewPagerAdapter
 import com.example.tendoapp.ui.main.view.fragments.CartFragment
-import com.example.tendoapp.ui.main.view.fragments.screens.FirstScreenFragment
-import com.example.tendoapp.ui.main.view.fragments.screens.OrdersFragment
-import com.example.tendoapp.ui.main.view.fragments.screens.SecondScreenFragment
-import com.example.tendoapp.ui.main.view.fragments.screens.ThirdScreenFragment
+import com.example.tendoapp.ui.main.view.fragments.OrdersFragment
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_cart_order.*
 

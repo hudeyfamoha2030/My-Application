@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tendoapp.R
 import kotlinx.android.synthetic.main.activity_order.*
+import kotlinx.android.synthetic.main.activity_order_details.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_profile.Edit_Button
 
