@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tendoapp.R
 import com.example.tendoapp.data.model.Category
-import com.example.tendoapp.data.model.Data
 import kotlinx.android.synthetic.main.fragment_shares.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_orders.*
@@ -73,7 +71,7 @@ class RecyclerViewAdapter(context: Context, list: ArrayList<Category>) :
             }
             else -> { // Note the block
                 return View1ViewHolder(
-                    LayoutInflater.from(context).inflate(R.layout.item_view1, parent, false)
+                    LayoutInflater.from(context).inflate(R.layout.item_location, parent, false)
                 )
             }
         }

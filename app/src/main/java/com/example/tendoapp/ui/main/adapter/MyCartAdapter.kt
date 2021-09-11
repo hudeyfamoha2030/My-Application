@@ -26,6 +26,7 @@ class MyCartAdapter(var context: Context) : RecyclerView.Adapter<MyCartAdapter.V
         this.dataList = dataList
         notifyDataSetChanged()
     }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var tv_name : TextView = itemView.tv_name
         var img_icon: ImageView =itemView.img_icon

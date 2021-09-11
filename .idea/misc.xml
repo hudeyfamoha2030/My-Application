@@ -5,6 +5,7 @@
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.6018518518518519" />
         <entry key="app/src/main/res/drawable-v24/button_background_shape.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/drawable-v24/ic_account.xml" value="0.1671875" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_phone_iphone_24.xml" value="0.18055555555555555" />
         <entry key="app/src/main/res/drawable-v24/ic_cart.xml" value="0.15092592592592594" />
         <entry key="app/src/main/res/drawable-v24/ic_lock_icon.xml" value="0.18055555555555555" />
@@ -17,6 +18,7 @@
         <entry key="app/src/main/res/drawable/border_rectangle_accent.xml" value="0.1259259259259259" />
         <entry key="app/src/main/res/drawable/dotted_receipt.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.15092592592592594" />
+        <entry key="app/src/main/res/drawable/my_cart_order_background.xml" value="0.1671875" />
         <entry key="app/src/main/res/drawable/selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/view_bg.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/drawable/view_scroller_bottom_sheet.xml" value="0.16666666666666666" />
@@ -24,7 +26,7 @@
         <entry key="app/src/main/res/layout-xxxhdpi/fragment_first_screen.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/activity_cart.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_cart_order.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_check_out_order.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_check_out_order.xml" value="0.3480333051426363" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/layout/activity_order.xml" value="0.261149525800978" />
@@ -47,8 +49,9 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/fragment_info_tab.xml" value="0.28804347826086957" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.21041666666666667" />
+        <entry key="app/src/main/res/layout/fragment_order_confirm.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_order_customer.xml" value="0.26666666666666666" />
-        <entry key="app/src/main/res/layout/fragment_order_my_cart.xml" value="0.28072916666666664" />
+        <entry key="app/src/main/res/layout/fragment_order_my_cart.xml" value="0.26690941635671256" />
         <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/fragment_second_screen.xml" value="0.23958333333333334" />
@@ -62,6 +65,7 @@
         <entry key="app/src/main/res/layout/item_category_type.xml" value="0.29466344610583967" />
         <entry key="app/src/main/res/layout/item_image_slider.xml" value="0.18020833333333333" />
         <entry key="app/src/main/res/layout/item_image_viewpager.xml" value="0.18020833333333333" />
+        <entry key="app/src/main/res/layout/item_location.xml" value="0.3377605135853369" />
         <entry key="app/src/main/res/layout/item_order.xml" value="0.29846014492753625" />
         <entry key="app/src/main/res/layout/item_product.xml" value="0.28804347826086957" />
         <entry key="app/src/main/res/layout/item_product_cart.xml" value="0.31040564373897706" />
@@ -69,6 +73,7 @@
         <entry key="app/src/main/res/layout/item_view1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_view2.xml" value="0.14108451804184827" />
         <entry key="app/src/main/res/layout/item_view_type_one.xml" value="0.203125" />
+        <entry key="app/src/main/res/layout/layout_location_item_bottom_sheet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_share_item_bottom_sheet.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/product_page_item.xml" value="0.21041666666666667" />
         <entry key="app/src/main/res/layout/recyclerview_layout.xml" value="0.375" />

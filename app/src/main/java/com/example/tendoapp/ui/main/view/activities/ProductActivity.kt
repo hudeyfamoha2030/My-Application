@@ -45,7 +45,6 @@ class ProductActivity : AppCompatActivity() {
     lateinit var indicatorContainer: LinearLayout
     private var imageList = mutableListOf<Int>()
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
-    lateinit var badgeDrawable: BadgeDrawable
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
