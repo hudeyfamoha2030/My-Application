@@ -41,7 +41,7 @@ class ExploreAdapter (context: Context, list: ArrayList<Data>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         if (viewType == VIEW_TYPE_ONE) {
             return View1ViewHolder(
-                LayoutInflater.from(context).inflate(R.layout.item_view1, parent, false)
+                LayoutInflater.from(context).inflate(R.layout.item_location, parent, false)
             )
         }
         return View2ViewHolder(

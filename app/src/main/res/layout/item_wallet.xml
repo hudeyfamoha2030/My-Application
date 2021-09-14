@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8sp"
+        android:layout_margin="12sp"
+        android:background="@drawable/ratings_button"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp">
+
+            <ImageView
+                android:id="@+id/image_wallet"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                app:tint="@color/white"
+                android:scaleType="centerInside"
+                android:src="@drawable/wallet3" />
+
+
+            <TextView
+                android:id="@+id/tv_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/image_wallet"
+                android:fontFamily="@font/poppins_bold"
+                android:letterSpacing="0.02"
+                android:text="GHS 50"
+                android:textColor="#FFF"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/tv_TN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image_wallet"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_below="@id/tv_wallet"
+                android:text="TN 11147"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp">
+
+            <TextView
+                android:id="@+id/tv_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12sp"
+                android:text="PENDING"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/pending_text"/>
+
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:layout_below="@id/tv_pending"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:text="11/9/2021"
+                android:textSize="12sp" />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

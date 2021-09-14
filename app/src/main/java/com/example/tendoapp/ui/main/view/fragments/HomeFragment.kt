@@ -36,7 +36,6 @@ class HomeFragment : Fragment() {
     lateinit var indicatorContainer: LinearLayout
     private lateinit var categoriesAdapter: CategoriesAdapter
     private var dataList = mutableListOf<Product>()
-    private var dataListCategory = mutableListOf<Category>()
     var str:String=""
 
     lateinit var sliderItemList:ArrayList<SliderItem>
@@ -73,6 +72,7 @@ class HomeFragment : Fragment() {
 
     private fun showTopCategories(){
 
+         var dataListCategory = mutableListOf<Category>()
         dataListCategory.add(Category(1,"Technology", R.drawable.ic_tech))
         dataListCategory.add(Category(1,"Pharmacy", R.drawable.ic_pharmacy))
         dataListCategory.add(Category(1,"Agriculture", R.drawable.ic_agri))

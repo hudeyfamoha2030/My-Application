@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C2BEBE">
+    android:background="#F3F4F6">
 
     <TextView
         android:id="@+id/tv_order_items"
@@ -71,6 +71,7 @@
             android:elevation="0dp"
             android:scaleType="center"
             app:borderWidth="0dp"
+            android:visibility="invisible"
             app:collapsedSize="36dp"
             app:elevation="@dimen/dimen_0"
             app:fabCustomSize="18dp"
@@ -112,7 +113,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-
                 android:fontFamily="@font/raleway_semibold"
                 android:text="01"
                 android:textColor="#B17248"
@@ -138,7 +138,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/font_size_24"
+            android:layout_marginStart="12sp"
             android:layout_weight="1"
             android:fontFamily="@font/raleway_semibold"
             android:gravity="start"
@@ -169,7 +169,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="70dp"
             android:hint="Enter Cupon Code"
             tools:ignore="MissingConstraints">
 
@@ -180,13 +180,21 @@
                 android:layout_marginBottom="12sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/ratings_button"
-            app:layout_constraintRight_toLeftOf="@id/editName"
-            android:text="Reply"/>
+            android:layout_marginStart="-60dp"
+            android:text="Apply"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/button_background_shape"
+            android:padding="10dp">
+
+
+        </androidx.appcompat.widget.AppCompatButton>
 
     </LinearLayout>
 

@@ -25,27 +25,26 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.kofigyan.stateprogressbar.StateProgressBar
-        android:id="@+id/step_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="11sp"
-        app:spb_currentStateNumber="one"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        app:spb_maxStateNumber="three"
-        app:spb_stateDescriptionSize="12sp"
-        app:spb_stateBackgroundColor="@color/tv_receipt_title"
-        app:spb_stateForegroundColor="#1099EE"
-        app:spb_stateNumberBackgroundColor="@color/tv_receipt_title"
-        app:spb_descriptionTopSpaceIncrementer="8dp"
-        app:spb_stateNumberForegroundColor="#eeeeee"
-        app:spb_currentStateDescriptionColor="#1099EE"
-        app:spb_stateDescriptionColor="@color/tv_receipt_title"
-        app:spb_animateToCurrentProgressState="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:spb_checkStateCompleted="true" />
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/step_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="11sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spb_animateToCurrentProgressState="true"
+            app:spb_checkStateCompleted="true"
+            app:spb_currentStateDescriptionColor="#1099EE"
+            app:spb_currentStateNumber="one"
+            app:spb_descriptionTopSpaceIncrementer="8dp"
+            app:spb_maxStateNumber="three"
+            app:spb_stateBackgroundColor="#F3F4F6"
+            app:spb_stateDescriptionColor="@color/tv_receipt_title"
+            app:spb_stateDescriptionSize="12sp"
+            app:spb_stateForegroundColor="#1099EE"
+            app:spb_stateNumberBackgroundColor="@color/color_icons"
+            app:spb_stateNumberForegroundColor="#eeeeee" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager"

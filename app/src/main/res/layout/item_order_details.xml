@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:padding="12sp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order_id"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#223263"
+            android:letterSpacing="0.02"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="12dp"/>
+
+
+        <TextView
+            android:id="@+id/my_order1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:text="Order at Lafyuu : August 1, 2017"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12sp"
+            android:paddingTop="8sp"
+            android:paddingEnd="12sp">
+
+            <TextView
+                android:id="@+id/my_order2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text="Order Status"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/shippingone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Shipping"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12sp"
+            android:paddingTop="8sp"
+            android:paddingEnd="12sp">
+
+            <TextView
+                android:id="@+id/my_order3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Items"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Itemone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Items purchased"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12sp"
+            android:paddingTop="8sp"
+            android:paddingEnd="12sp">
+
+            <TextView
+                android:id="@+id/my_order4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Profit from customer"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/profit_from_customerone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:text="₵67.90"
+                android:textColor="#1099EE"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12sp"
+            android:paddingTop="8sp"
+            android:paddingEnd="12sp">
+
+            <TextView
+                android:id="@+id/my_order5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/priceone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_extra_bold"
+                android:text="$299,43"
+                android:textColor="#1099EE"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

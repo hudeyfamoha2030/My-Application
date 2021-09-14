@@ -1,11 +1,16 @@
 package com.example.tendoapp.ui.main.view.activities
 
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.tendoapp.databinding.ActivityCheckOutOrderBinding
 import com.example.tendoapp.ui.main.adapter.ViewPagerAdapter
+import com.example.tendoapp.ui.main.view.`interface`.BottomSheetInterface
+import com.example.tendoapp.ui.main.view.fragments.CartFragment
 import com.example.tendoapp.ui.main.view.fragments.OrderConfirmFragment
 import com.example.tendoapp.ui.main.view.fragments.OrderCustomerFragment
 import com.example.tendoapp.ui.main.view.fragments.OrderMyCartFragment
@@ -58,12 +63,9 @@ class CheckOutOrderActivity : AppCompatActivity() {
                 }
             }
         }
-            binding.viewpager.setUserInputEnabled(false);
+//            binding.viewpager.setUserInputEnabled(true);
             binding.viewpager.registerOnPageChangeCallback(viewpagerCallback)
         }
-
-
-
 
 }
 

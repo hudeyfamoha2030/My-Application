@@ -13,6 +13,7 @@ import com.example.tendoapp.R
 import com.example.tendoapp.databinding.FragmentAccountBinding
 import com.example.tendoapp.ui.main.view.activities.OrderActivity
 import com.example.tendoapp.ui.main.view.activities.ProfileActivity
+import com.example.tendoapp.ui.main.view.activities.WalletActivity
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class AccountFragment : Fragment() {
@@ -34,6 +35,11 @@ class AccountFragment : Fragment() {
         }
         binding.tvOrders.setOnClickListener {
             this.startActivity(Intent(context,OrderActivity::class.java))
+
+        }
+
+        binding.tvWallet.setOnClickListener {
+            this.startActivity(Intent(context,WalletActivity::class.java))
 
         }
         return binding.root

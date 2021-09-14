@@ -4,10 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.tendoapp.R
+import com.example.tendoapp.data.model.Category
+import com.example.tendoapp.ui.main.adapter.MyOrderAdapter
 import com.kofigyan.stateprogressbar.StateProgressBar
 import kotlinx.android.synthetic.main.activity_order_details.*
 import kotlinx.android.synthetic.main.activity_user.*
+import kotlinx.android.synthetic.main.fragment_orders.*
 
 
 class OrderDetailsActivity : AppCompatActivity() {
@@ -27,6 +31,7 @@ class OrderDetailsActivity : AppCompatActivity() {
 
             onBackPressed()
         }
+    }
+
 
     }
-}
